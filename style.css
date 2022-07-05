@@ -101,6 +101,8 @@ body{
    height: 150px;
    background: radial-gradient(yellow 10%, orange,red);
    box-shadow: 0px 0px 30px 10px red;
+   animation: sol 8s linear 0s infinite;
+   -webkit-animation: sol 8s linear 0s infinite;
 }
 
 .moon{
@@ -122,8 +124,8 @@ body{
    position: absolute;
    top: 20px;
    left: -500px;
-   animation: nube 16s linear 0s infinite;
-   -webkit-animation: nube 16s linear 0s infinite;
+   animation: nube 12s linear 0s infinite;
+   -webkit-animation: nube 12s linear 0s infinite;
 }
 .nube2{
    width: 200px;
@@ -131,8 +133,8 @@ body{
    position: absolute;
    top: 40px;
    left: -500px;
-   animation: nube 16s linear 0s infinite;
-   -webkit-animation: nube 16s linear 0s infinite;
+   animation: nube 14s linear 0s infinite;
+   -webkit-animation: nube 14s linear 0s infinite;
 }
 .nube3{
    width: 180px;
@@ -149,8 +151,8 @@ body{
    position: absolute;
    top: 80px;
    left: -500px;
-   animation: nube 16s linear 0s infinite;
-   -webkit-animation: nube 16s linear 0s infinite;
+   animation: nube 10s linear 0s infinite;
+   -webkit-animation: nube 10s linear 0s infinite;
 }
 
 @keyframes astros{
@@ -167,6 +169,18 @@ body{
       -moz-transform: rotate(360deg);
       -ms-transform: rotate(360deg);
       -o-transform: rotate(360deg);
+   }
+}
+
+@keyframes sol{
+   0%{
+      box-shadow: 0px 0px 30px 10px red;
+   }
+   50%{
+      box-shadow: 0px 0px 200px 80px rgb(255, 0, 0);
+   }
+   100%{
+      box-shadow: 0px 0px 30px 10px red;
    }
 }
 
@@ -324,7 +338,7 @@ body{
 }
 @keyframes nube{
    0%{
-      left: var(--b);
+      left: -500px;
       opacity: 0.8;
    }
    100%{
